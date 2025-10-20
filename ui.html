@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <a href="#" class="active">Reports</a>
+                <a href="#">Library</a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="#">Support</a>
+                <a href="#">Get Started</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>DASHBOARD</h1>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Timeframe:</label>
+                        <select id="timeframeFilter">
+                            <option>All-time</option>
+                            <option>Last 30 days</option>
+                            <option>Last 7 days</option>
+                            <option>Today</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>People:</label>
+                        <select id="peopleFilter">
+                            <option>All</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Topic:</label>
+                        <select id="topicFilter">
+                            <option>All</option>
+                            <option>Classification</option>
+                            <option>Detection</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="model-card">
+                <div class="model-header">
+                    <div class="model-name">Deep-Learning Model</div>
+                    <div class="model-title" id="modelTitle">Faster R-CNN + EfficientNet-B7</div>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-label">Accuracy</div>
+                        <div class="metric-value" id="accuracy">96%</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Runtime</div>
+                        <div class="metric-value" id="runtime">2m 34s</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Width Gain</div>
+                        <div class="metric-value" id="widthGain">64%</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Length Gain</div>
+                        <div class="metric-value" id="lengthGain">86%</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Depth Gain</div>
+                        <div class="metric-value positive" id="depthGain">+34%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <div class="chart-title">Severity Level</div>
+                    <select class="chart-dropdown" id="timeFilter">
+                        <option>Day</option>
+                        <option>Week</option>
+                        <option>Month</option>
+                    </select>
+                </div>
+                <canvas id="severityChart"></canvas>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-card-name">Sam Wheeler</div>
+                    <div class="stat-card-email">samwheeler@example.com</div>
+                    <div class="stat-row">
+                        <span>637 Points</span>
+                        <span>85% Correct <span class="badge">3</span></span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-name">Southeast Region</div>
+                    <div class="stat-card-email">Regional Performance</div>
+                    <div class="stat-row">
+                        <span>52 Points / User</span>
+                        <span><span class="badge">3</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
